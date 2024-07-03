@@ -1,11 +1,14 @@
 const ProductCard = ({ data }) => {
-  const { title, price, thumbnail, rating } = data;
+  const { title, price, brand, thumbnail, rating } = data;
   return (
-    <div className='w-80 border '>
+    <div className='w-80 border shadow-lg cursor-pointer'>
       <img className='object-cover w-full' src={thumbnail} alt='productImage' />
-      <div className='p-2'>
-        <p className='text-center'>{title}</p>
-        <p>${price}</p>
+      <div className='px-12 py-4 flex flex-col gap-4'>
+        <div className='text-center'>
+          <p className=' text-blue-600 font-semibold'>{title}</p>
+          <p className='text-gray-500 '>{brand}</p>
+        </div>
+        <p className='text-gray-400 '>${price}</p>
       </div>
     </div>
   );

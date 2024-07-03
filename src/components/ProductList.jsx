@@ -17,7 +17,7 @@ const ProductList = () => {
   };
 
   return (
-    <div className='grid grid-flow-row grid-cols-3 gap-10'>
+    <div className='grid grid-flow-row grid-cols-4 gap-10'>
       {productData.map((product) => (
         <ProductCard key={product.id} data={{ ...product }} />
       ))}
